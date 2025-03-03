@@ -1,0 +1,28 @@
+.card {
+    background-color: var(--bgSecondary);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card .fellepo {
+    font-size: larger;
+    margin-bottom: 5px;
+}
+
+.card .kezdes {
+    font-size: small;
+    margin: 0;
+}
+
+.card .ido::before {
+    content: 'Duration: '
+}
+
+.card button {
+    width: fit-content;
+    background-color: var(--bgButton);
+    border: 1px solid var(--border);
+    border-radius: 10px;;
+    color: var(--text);
+    padding: 5px;
+}

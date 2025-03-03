@@ -1,0 +1,24 @@
+:root {
+  --bgPrimary: #252530;
+  --bgSecondary: #30303F;
+  --bgButton: #353540;
+  --bgHigh: #404050;
+  --border: #202025;
+  --text: #DDDDDD;
+  --textHigh: #FFFFFF;
+}
+
+body {
+  background-color: var(--bgPrimary);
+  color: var(--text);
+  margin: 0;
+}
+
+a {
+  color: var(--text);
+  transition: color .2s ease;
+}
+
+a:hover {
+  color: var(--textHigh);
+}
