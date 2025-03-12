@@ -6,6 +6,9 @@
   --border: #202025;
   --text: #DDDDDD;
   --textHigh: #FFFFFF;
+
+  --bgDisabled: #232325;
+  --textDisabled: #AAAAAA;
 }
 
 body {
@@ -21,4 +24,55 @@ a {
 
 a:hover {
   color: var(--textHigh);
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form label input {
+  display: block;
+}
+
+form label input:not([type="submit"]) {
+  background-color: var(--bgSecondary);
+  outline: 0;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  padding: 5px;;
+}
+
+form input[type="submit"] {
+  background-color: var(--bgButton);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  color: var(--text);
+  margin-top: 15px;
+  padding: 7.5px;
+  border-radius: 5px;
+  transition: background-color .2s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--bgHigh);
+}
+
+.alert {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 7.5px;
+}
+
+.alert p {
+  margin: 0;
+}
+
+.alert.success {
+  background-color: #206020;
+}
+
+.alert.error {
+  background-color: #602020;
 }

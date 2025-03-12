@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateKoncertDto } from './dto/create-koncert.dto';
 import { UpdateKoncertDto } from './dto/update-koncert.dto';
 import { PrismaService } from 'src/prisma.service';
@@ -8,7 +8,8 @@ export class KoncertService {
   constructor (private readonly db: PrismaService) {}
 
   create(createKoncertDto: CreateKoncertDto) {
-    console.log(createKoncertDto.kezdes.toISOString());
+    if (createKoncertDto.kezdes.getTime() < Date.now())
+      throw new ConflictException("A date nem lehet múltban");
     return this.db.koncert.create({data: createKoncertDto});
   }
 

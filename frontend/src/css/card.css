@@ -1,7 +1,9 @@
 .card {
+    width: 130px;
     background-color: var(--bgSecondary);
     border-radius: 5px;
     padding: 10px;
+    transition: background-color .4s ease;
 }
 
 .card .fellepo {
@@ -25,4 +27,23 @@
     border-radius: 10px;;
     color: var(--text);
     padding: 5px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.card button:hover {
+    background-color: var(--bgHigh);
+}
+
+.card.disabled {
+    background-color: var(--bgDisabled);
+}
+
+.card.disabled * {
+    color: var(--textDisabled);
+}
+
+.card.disabled button {
+    background-color: var(--bgDisabled);
+    border-color: transparent;
 }
